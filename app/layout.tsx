@@ -27,8 +27,12 @@ export default function RootLayout({
       lang="en"
       className={`bg-white dark:bg-gray-950 text-black dark:text-white ${manrope.className}`}
     >
-      <body className="min-h-[100dvh] bg-gray-50">
-        <UserProvider userPromise={userPromise}>{children}</UserProvider>
+      <body className="bg-gray-50 min-h-[100dvh]">
+        <UserProvider userPromise={userPromise}>
+          <main>
+          {children}
+          </main>
+        </UserProvider>
       </body>
     </html>
   );
